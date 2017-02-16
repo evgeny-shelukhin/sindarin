@@ -1,8 +1,8 @@
 <div class="form-group">
-  <label for="source">Введите текст на русском</label>
-  <input type="text" id="source" name="source" class="form-control">
+  <label>Введите текст на русском</label>
+  <input type="text" name="userInput" class="form-control" #userInput (keyup)="getTranslation(userInput.value)">
 </div>
 <div class="form-group">
-  <label>Перевод на эльфийский</label>
-  <textarea class="form-control" rows="5" style="resize: none;"></textarea>
+  <label>Перевод на английский</label>
+  <textarea class="form-control" rows="5" style="resize: none;" #translationInput value="{{translation}}"></textarea>
 </div>
