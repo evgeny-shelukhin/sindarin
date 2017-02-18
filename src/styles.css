@@ -5,7 +5,29 @@ body {
   background-color: #eee;
 }
   .inner {
+    position: relative;
     width: 330px;
     margin: 0 auto;
     padding: 15px;
+    animation: fadeinfrombottom 1s;
+  }
+  @keyframes fadeinfrombottom {
+    0% {opacity: 0; bottom: -150px;}
+    100% {opacity: 1; bottom: 0}
+  }
+  .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    animation: spin .7s linear infinite;
+  }
+  @keyframes spin {
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(360deg)}
   }
