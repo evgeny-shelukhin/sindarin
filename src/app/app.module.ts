@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { TranslatorComponent } from './translator/translator.component';
@@ -12,6 +13,7 @@ import { TranslatorComponent } from './translator/translator.component';
     TranslatorComponent
   ],
   imports: [
+    NgbModule.forRoot(),
     BrowserModule,
     ReactiveFormsModule,
     HttpModule
